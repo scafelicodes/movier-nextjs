@@ -1,0 +1,62 @@
+.featured {
+    height: 100vh;
+}
+
+.featured--vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured--horizontal {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 10%, transparent 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+}
+
+
+.featured--name {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.featured--info {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.featured--year {
+    display: inline-block;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.featured--points {
+    display: inline-block;
+    color: #f90;
+    margin-right: 15px;
+}
+
+.featured--seasons {
+    display: inline-block;
+    color: #fff;
+}
+
+.featured--description {
+    font-size: 20px;
+    color: #999;
+    margin-top: 20px;
+    max-width: 40%;
+}
+
+
+.featured--genres {
+    color: #fff;
+    margin-top: 15px;
+}
