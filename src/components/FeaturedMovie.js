@@ -9,6 +9,8 @@ export default ({item}) => {
         genres.push (item.genres[i].name);
     }
 
+
+
     return (
         <section className="featured" style={{
             backgroundSize: 'cover',

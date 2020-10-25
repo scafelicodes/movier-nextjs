@@ -10,6 +10,7 @@ export default () => {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState([]);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -31,10 +32,26 @@ export default () => {
 
   },  []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader (false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  },[]);
+
   return (
     <div className="page">
 
-      <Header />
+      <Header black={blackHeader} />
 
       {featuredData && 
         <FeaturedMovie item={featuredData} />
@@ -48,7 +65,12 @@ export default () => {
          
       </section>
 
+      {movieList.length <= 0 &&
+          <div className="loading">
+             <img src="https://www.filmelier.com/pt/br/news/wp-content/uploads/2020/03/Netflix_LoadTime-scaled.gif" width="500" alt="Carregando" />
+          </div>
 
+      }
 
     </div>
   );

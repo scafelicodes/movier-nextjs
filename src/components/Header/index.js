@@ -1,21 +1,21 @@
 import React from 'react';
 import './style.css';
 
-export default () => {
+export default ({black}) => {
     
     return (
-        <div className="header">
+        <header className={black ? 'black' : ''}>
             
-            {/* <div className="header--logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Nickelodeon_Movies_2019_Logo.png" alt="" />
+            <div className="header--logo">
+                <img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-2-1.png" alt="" />
             </div>
 
             <div className="header--user">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png" alt="" />
             </div>
-     */}
+    
         
-        </div>
+        </header>
     );
 }
 
