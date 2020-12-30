@@ -1,6 +1,9 @@
 import React from 'react';
 import './FeaturedMovie.css';
 
+
+
+
 export default ({item}) => {
 
     let firstDate = new Date(item.first_air_date);
@@ -8,7 +11,6 @@ export default ({item}) => {
     for (let i in item.genres) {
         genres.push (item.genres[i].name);
     }
-
 
 
     return (
@@ -59,3 +61,4 @@ export default ({item}) => {
         </section>
     );
 }
+
