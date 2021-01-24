@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
   box-sizing: border-box;
 }
@@ -25,4 +27,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 0px 50px;
+
+  text-align: center;
+}
+
+footer a {
+  color: #777777;
+  text-decoration: none;
 }
